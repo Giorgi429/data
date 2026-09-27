@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>საიდუმლო მოსაწვევი</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="float-bg" id="floatBg"></div>
+
+<div class="card">
+
+  <div class="dots" id="dots">
+    <div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+  </div>
+
+  <div class="step active" id="step1">
+    <div class="icon">💌</div>
+    <h1>ჩემო პრინცესავ</h1>
+    <div class="sub">
+      შენთვის ერთი საიდუმლო მოსაწვევი მაქვს მომზადებული.<br>
+      მაგრამ არაფერს ისე ადვილად არ გეტყვი 😏<br>
+      რამდენიმე მცირე გამოწვევის გავლა მოგიწევს, სანამ სრულ სურათს ნახავ...
+    </div>
+    <button class="cta" onclick="goTo(2)">დავიწყოთ 💫</button>
+  </div>
+
+  <div class="step" id="step2">
+    <h2>🔍 გამოწვევა #1</h2>
+    <div class="sub">იპოვე ყველა დამალული გული, სანამ გააგრძელებ</div>
+    <div class="progress">ნაპოვნია: <span id="foundCount">0</span> / 6</div>
+    <div class="hunt-area" id="huntArea"></div>
+    <button class="cta" id="huntBtn" disabled onclick="goTo(3)">გავაგრძელოთ →</button>
+  </div>
+
+  <div class="step" id="step3">
+    <h2>🎟️ გამოწვევა #2</h2>
+    <div class="sub">გაფხიკე ბარათი თითით ან მაუსით</div>
+    <div class="scratch-wrap" id="scratchWrap">
+      <div class="scratch-under">🤫<br>ეს ჯერჯერობით საიდუმლოდ რჩება...<br>მოთმინებით დაელოდე პაემანს 💕</div>
+      <canvas id="scratchCanvas" width="380" height="160"></canvas>
+    </div>
+    <div class="hint">გაფხიკე მინიმუმ ნახევარი, რომ გააგრძელო</div>
+    <button class="cta" id="scratchBtn" disabled onclick="goTo(4)">გავაგრძელოთ →</button>
+  </div>
+
+  <div class="step" id="step4">
+    <h2>💭 ბოლო კითხვა</h2>
+    <div class="sub">მზად ხარ ?</div>
+    <div class="quiz-options">
+      <button class="qopt" onclick="pick(this)">💯 რა თქმა უნდა</button>
+      <button class="qopt" onclick="pick(this)">😏 ყოველთვის მზად ვარ</button>
+      <button class="qopt" onclick="pick(this)">😍 დიახ, ათასჯერ დიახ</button>
+    </div>
+    <button class="cta" id="finalBtn" disabled onclick="goTo(5)">საბოლოო მოსაწვევი →</button>
+  </div>
+
+  <div class="step" id="step5">
+    <div class="icon">🎉</div>
+    <h1>ყოჩაღ, გამოცდა გაიარე!</h1>
+    <div class="sub">და აი, რაც შენ დაგელოდება:</div>
+    <div class="menu">
+      <div class="menu-item"><span class="lock">🔒</span> ადგილი — <b>სრული საიდუმლოა</b>, პირადად შეიტყობ</div>
+      <div class="menu-item"><span class="lock">🔒</span> კერძი — <b>ესეც სიურპრიზია</b>, ოღონდ ხელით მომზადებული და გულით</div>
+      <div class="menu-item">🕯️ განწყობა — რომანტიული, თბილი, მხოლოდ ჩვენთვის</div>
+      <div class="menu-item">📅 დრო-თარიღი — ერთად შევთანხმდეთ</div>
+    </div>
+    <div class="sub">ერთადერთი, რაც უნდა იცოდე: <b>მოემზადე და მენდე</b> 💕</div>
+    <div class="note">გამზადებულია სიყვარულით, მხოლოდ შენთვის ✨</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
